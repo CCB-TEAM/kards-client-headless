@@ -1,0 +1,887 @@
+{
+  "cards": [
+    {
+      "attack": 0,
+      "blitz": false,
+      "cost": 3,
+      "defense": 0,
+      "effects": [
+        {
+          "effects": [
+            {
+              "effects": [
+                {
+                  "card": "card_unit_aichi_d3a",
+                  "op": "create",
+                  "side": "friendly",
+                  "zone": "support"
+                },
+                {
+                  "condition": {
+                    "target": {
+                      "kind": "created"
+                    },
+                    "test": "exists"
+                  },
+                  "op": "if",
+                  "otherwise": [],
+                  "then": [
+                    {
+                      "amount": {
+                        "expr": "attack",
+                        "target": {
+                          "kind": "created"
+                        }
+                      },
+                      "op": "damage",
+                      "target": {
+                        "kind": "bound"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "op": "bind",
+              "target": {
+                "kind": "random",
+                "query": {
+                  "area": "board",
+                  "exclude_source": false,
+                  "side": "enemy",
+                  "units_only": true
+                }
+              }
+            }
+          ],
+          "on": "deploy"
+        }
+      ],
+      "faction": "Japan",
+      "id": "card_event_audacity",
+      "kind": "order",
+      "native_code": "lf",
+      "operation_cost": 0,
+      "title": "AUDACITY"
+    },
+    {
+      "attack": 0,
+      "blitz": false,
+      "cost": 4,
+      "defense": 0,
+      "effects": [
+        {
+          "effects": [
+            {
+              "effects": [
+                {
+                  "amount": 3,
+                  "op": "damage",
+                  "target": {
+                    "kind": "chosen"
+                  }
+                },
+                {
+                  "amount": 2,
+                  "op": "damage",
+                  "target": {
+                    "kind": "saved"
+                  }
+                }
+              ],
+              "op": "capture",
+              "target": {
+                "kind": "all",
+                "query": {
+                  "adjacent_to": {
+                    "kind": "chosen"
+                  },
+                  "area": "board",
+                  "exclude_source": false,
+                  "side": "enemy",
+                  "units_only": false
+                }
+              }
+            }
+          ],
+          "on": "deploy"
+        }
+      ],
+      "faction": "Japan",
+      "id": "card_event_bombing_raid",
+      "kind": "order",
+      "native_code": "5x",
+      "operation_cost": 0,
+      "targeting": {
+        "area": "board",
+        "exclude_source": false,
+        "side": "enemy",
+        "units_only": false
+      },
+      "title": "BOMBING RAID"
+    },
+    {
+      "attack": 0,
+      "blitz": false,
+      "cost": 2,
+      "defense": 0,
+      "effects": [
+        {
+          "effects": [
+            {
+              "amount": 2,
+              "op": "damage",
+              "target": {
+                "kind": "all",
+                "query": {
+                  "area": "board",
+                  "exclude_source": false,
+                  "side": "enemy",
+                  "units_only": false
+                }
+              }
+            },
+            {
+              "amount": -1,
+              "op": "slots",
+              "side": "friendly"
+            }
+          ],
+          "on": "deploy"
+        }
+      ],
+      "faction": "Japan",
+      "id": "card_event_desperate_measures",
+      "kind": "order",
+      "native_code": "5C",
+      "operation_cost": 0,
+      "title": "DESPERATE MEASURES"
+    },
+    {
+      "attack": 0,
+      "blitz": false,
+      "cost": 3,
+      "defense": 0,
+      "effects": [
+        {
+          "effects": [
+            {
+              "attack": 2,
+              "defense": 1,
+              "op": "modify",
+              "target": {
+                "kind": "all",
+                "query": {
+                  "area": "board",
+                  "exclude_source": false,
+                  "side": "friendly",
+                  "units_only": true
+                }
+              }
+            },
+            {
+              "effects": [
+                {
+                  "count": 1,
+                  "op": "discard_random",
+                  "side": "friendly"
+                }
+              ],
+              "op": "schedule",
+              "turns": 2
+            }
+          ],
+          "on": "deploy"
+        }
+      ],
+      "faction": "Japan",
+      "id": "card_event_naval_supply_run",
+      "kind": "order",
+      "native_code": "5X",
+      "operation_cost": 0,
+      "title": "NAVAL SUPPLY RUN"
+    },
+    {
+      "attack": 0,
+      "blitz": false,
+      "cost": 1,
+      "defense": 0,
+      "effects": [
+        {
+          "effects": [
+            {
+              "condition": {
+                "query": {
+                  "area": "front",
+                  "exclude_source": false,
+                  "faction": "Japan",
+                  "side": "friendly",
+                  "units_only": true
+                },
+                "test": "any"
+              },
+              "op": "if",
+              "otherwise": [],
+              "then": [
+                {
+                  "count": 2,
+                  "op": "draw",
+                  "side": "friendly"
+                }
+              ]
+            }
+          ],
+          "on": "deploy"
+        }
+      ],
+      "faction": "Japan",
+      "id": "card_event_rising_sun",
+      "kind": "order",
+      "native_code": "5Z",
+      "operation_cost": 0,
+      "title": "RISING SUN"
+    },
+    {
+      "attack": 0,
+      "blitz": false,
+      "cost": 3,
+      "defense": 0,
+      "effects": [
+        {
+          "effects": [
+            {
+              "count": {
+                "expr": "count",
+                "query": {
+                  "area": "board",
+                  "exclude_source": false,
+                  "side": "any",
+                  "units_only": true
+                }
+              },
+              "effects": [
+                {
+                  "amount": 1,
+                  "op": "damage",
+                  "target": {
+                    "kind": "random",
+                    "query": {
+                      "area": "board",
+                      "exclude_source": false,
+                      "side": "enemy",
+                      "units_only": false
+                    }
+                  }
+                }
+              ],
+              "op": "repeat"
+            }
+          ],
+          "on": "deploy"
+        }
+      ],
+      "faction": "Japan",
+      "id": "card_event_shinano",
+      "kind": "order",
+      "native_code": "m6",
+      "operation_cost": 0,
+      "title": "IJN SHINANO"
+    },
+    {
+      "attack": 0,
+      "blitz": false,
+      "cost": 1,
+      "defense": 0,
+      "effects": [
+        {
+          "effects": [
+            {
+              "op": "suppress",
+              "target": {
+                "kind": "chosen"
+              }
+            },
+            {
+              "condition": {
+                "query": {
+                  "air_only": true,
+                  "area": "board",
+                  "exclude_source": false,
+                  "side": "friendly",
+                  "units_only": true
+                },
+                "test": "any"
+              },
+              "op": "if",
+              "otherwise": [],
+              "then": [
+                {
+                  "count": 1,
+                  "op": "draw",
+                  "side": "friendly"
+                }
+              ]
+            }
+          ],
+          "on": "deploy"
+        }
+      ],
+      "faction": "Germany",
+      "id": "card_event_suppression_fire",
+      "kind": "order",
+      "native_code": "3f",
+      "operation_cost": 0,
+      "targeting": {
+        "area": "board",
+        "exclude_source": false,
+        "side": "any",
+        "units_only": true
+      },
+      "title": "SUPPRESSION"
+    },
+    {
+      "attack": 0,
+      "blitz": false,
+      "cost": 1,
+      "defense": 0,
+      "effects": [
+        {
+          "effects": [
+            {
+              "condition": {
+                "target": {
+                  "kind": "chosen"
+                },
+                "test": "pinned"
+              },
+              "op": "if",
+              "otherwise": [
+                {
+                  "op": "pin",
+                  "target": {
+                    "kind": "chosen"
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "op": "destroy",
+                  "target": {
+                    "kind": "chosen"
+                  }
+                }
+              ]
+            }
+          ],
+          "on": "deploy"
+        }
+      ],
+      "faction": "Japan",
+      "id": "card_event_surprise_attack",
+      "kind": "order",
+      "native_code": "61",
+      "operation_cost": 0,
+      "targeting": {
+        "area": "board",
+        "exclude_source": false,
+        "side": "enemy",
+        "units_only": true
+      },
+      "title": "SURPRISE ATTACK"
+    },
+    {
+      "attack": 0,
+      "blitz": false,
+      "cost": 0,
+      "defense": 20,
+      "faction": "Japan",
+      "id": "card_location_changchun",
+      "kind": "hq",
+      "native_code": "6l",
+      "operation_cost": 0,
+      "title": "TRUK"
+    },
+    {
+      "attack": 2,
+      "blitz": true,
+      "cost": 1,
+      "defense": 1,
+      "faction": "Japan",
+      "id": "card_unit_15th_cavalry_regiment",
+      "kind": "infantry",
+      "native_code": "6x",
+      "operation_cost": 0,
+      "title": "15th CAVALRY REGIMENT"
+    },
+    {
+      "attack": 0,
+      "blitz": false,
+      "combat": {
+        "fury": false,
+        "smokescreen": true
+      },
+      "cost": 1,
+      "defense": 4,
+      "effects": [
+        {
+          "effects": [
+            {
+              "condition": {
+                "query": {
+                  "area": "discard",
+                  "exclude_source": false,
+                  "side": "friendly",
+                  "units_only": true
+                },
+                "test": "subject_matches"
+              },
+              "op": "if",
+              "otherwise": [],
+              "then": [
+                {
+                  "amount": 1,
+                  "op": "damage",
+                  "target": {
+                    "kind": "all",
+                    "query": {
+                      "area": "board",
+                      "exclude_source": false,
+                      "kind": "hq",
+                      "side": "enemy",
+                      "units_only": false
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "on": "other_death"
+        }
+      ],
+      "faction": "Japan",
+      "id": "card_unit_1st_signal_regiment",
+      "kind": "infantry",
+      "native_code": "6y",
+      "operation_cost": 4,
+      "title": "1st SIGNAL REGIMENT"
+    },
+    {
+      "attack": 2,
+      "blitz": false,
+      "cost": 2,
+      "defense": 1,
+      "effects": [
+        {
+          "effects": [
+            {
+              "condition": {
+                "query": {
+                  "area": "front",
+                  "exclude_source": false,
+                  "side": "friendly",
+                  "units_only": true
+                },
+                "test": "any"
+              },
+              "op": "if",
+              "otherwise": [],
+              "then": [
+                {
+                  "count": 1,
+                  "op": "draw",
+                  "side": "friendly"
+                }
+              ]
+            }
+          ],
+          "on": "end_turn"
+        }
+      ],
+      "faction": "Germany",
+      "id": "card_unit_22_infantry",
+      "kind": "infantry",
+      "native_code": "3Q",
+      "operation_cost": 1,
+      "title": "22. INFANTRY REGIMENT"
+    },
+    {
+      "attack": 2,
+      "blitz": true,
+      "cost": 3,
+      "defense": 2,
+      "effects": [
+        {
+          "effects": [
+            {
+              "op": "destroy",
+              "target": {
+                "kind": "chosen"
+              }
+            }
+          ],
+          "on": "deploy"
+        }
+      ],
+      "faction": "Japan",
+      "id": "card_unit_2nd_raiding_brigade",
+      "kind": "infantry",
+      "native_code": "6B",
+      "operation_cost": 1,
+      "targeting": {
+        "area": "board",
+        "exclude_source": false,
+        "max_attack": 2,
+        "side": "enemy",
+        "units_only": true
+      },
+      "targeting_optional": true,
+      "title": "2nd RAIDING BRIGADE"
+    },
+    {
+      "attack": 1,
+      "auras": [
+        {
+          "attack": {
+            "expr": "count",
+            "query": {
+              "adjacent_to": {
+                "kind": "source"
+              },
+              "area": "board",
+              "exclude_source": false,
+              "faction": "Japan",
+              "side": "friendly",
+              "units_only": true
+            }
+          },
+          "target": {
+            "kind": "source"
+          }
+        }
+      ],
+      "blitz": true,
+      "cost": 1,
+      "defense": 1,
+      "faction": "Japan",
+      "id": "card_unit_3rd_yokosuka",
+      "kind": "infantry",
+      "native_code": "lk",
+      "operation_cost": 0,
+      "title": "3rd YOKOSUKA"
+    },
+    {
+      "attack": 1,
+      "blitz": true,
+      "combat": {
+        "fury": true,
+        "smokescreen": false
+      },
+      "cost": 1,
+      "defense": 1,
+      "faction": "Japan",
+      "id": "card_unit_41st_bicycle_regiment",
+      "kind": "infantry",
+      "native_code": "6E",
+      "operation_cost": 0,
+      "title": "41st BICYCLE REGIMENT"
+    },
+    {
+      "attack": 3,
+      "auras": [
+        {
+          "attack": {
+            "expr": "multiply",
+            "left": 2,
+            "right": {
+              "expr": "count",
+              "query": {
+                "area": "board",
+                "card": "card_unit_aichi_d3a",
+                "exclude_source": true,
+                "side": "friendly",
+                "units_only": true
+              }
+            }
+          },
+          "target": {
+            "kind": "source"
+          }
+        }
+      ],
+      "blitz": false,
+      "cost": 3,
+      "defense": 2,
+      "faction": "Japan",
+      "id": "card_unit_aichi_d3a",
+      "kind": "bomber",
+      "native_code": "6K",
+      "operation_cost": 2,
+      "title": "AICHI D3A"
+    },
+    {
+      "attack": 1,
+      "blitz": false,
+      "cost": 3,
+      "defense": 3,
+      "effects": [
+        {
+          "effects": [
+            {
+              "count": 2,
+              "op": "draw_selected",
+              "query": {
+                "area": "deck",
+                "cost": 1,
+                "exclude_source": false,
+                "side": "friendly",
+                "units_only": true
+              }
+            }
+          ],
+          "on": "deploy"
+        }
+      ],
+      "faction": "Japan",
+      "id": "card_unit_dinah_iii",
+      "kind": "fighter",
+      "native_code": "hH",
+      "operation_cost": 1,
+      "title": "Ki-46 DINAH III"
+    },
+    {
+      "attack": 2,
+      "blitz": true,
+      "cost": 3,
+      "defense": 2,
+      "effects": [
+        {
+          "effects": [
+            {
+              "amount": 2,
+              "op": "damage",
+              "target": {
+                "kind": "all",
+                "query": {
+                  "area": "board",
+                  "exclude_source": false,
+                  "kind": "hq",
+                  "side": "enemy",
+                  "units_only": false
+                }
+              }
+            }
+          ],
+          "on": "after_attack"
+        }
+      ],
+      "faction": "Japan",
+      "id": "card_unit_ki_30_ann",
+      "kind": "bomber",
+      "native_code": "rk",
+      "operation_cost": 1,
+      "title": "Ki-30 ANN"
+    },
+    {
+      "attack": 6,
+      "blitz": false,
+      "cost": 4,
+      "defense": 5,
+      "effects": [
+        {
+          "effects": [
+            {
+              "count": 1,
+              "op": "draw",
+              "side": "friendly"
+            },
+            {
+              "count": 2,
+              "op": "draw",
+              "side": "enemy"
+            }
+          ],
+          "on": "start_turn"
+        }
+      ],
+      "faction": "Japan",
+      "id": "card_unit_ki_83",
+      "kind": "fighter",
+      "native_code": "7x",
+      "operation_cost": 2,
+      "title": "Ki-83"
+    },
+    {
+      "attack": 2,
+      "blitz": true,
+      "cost": 2,
+      "defense": 2,
+      "effects": [
+        {
+          "effects": [
+            {
+              "condition": {
+                "query": {
+                  "area": "board",
+                  "exclude_source": false,
+                  "kind": "infantry",
+                  "side": "friendly",
+                  "units_only": true
+                },
+                "test": "any"
+              },
+              "op": "if",
+              "otherwise": [],
+              "then": [
+                {
+                  "amount": -1,
+                  "op": "operation_cost",
+                  "target": {
+                    "kind": "source"
+                  }
+                }
+              ]
+            }
+          ],
+          "on": "deploy"
+        }
+      ],
+      "faction": "Germany",
+      "id": "card_unit_panzer_35_t",
+      "kind": "tank",
+      "native_code": "4p",
+      "operation_cost": 1,
+      "title": "PANZER 35(t)"
+    },
+    {
+      "attack": 2,
+      "blitz": false,
+      "cost": 2,
+      "defense": 2,
+      "effects": [
+        {
+          "active_in": "hand",
+          "effects": [
+            {
+              "condition": {
+                "test": "frontline_owned"
+              },
+              "op": "if",
+              "otherwise": [],
+              "then": [
+                {
+                  "op": "play_free",
+                  "target": {
+                    "kind": "source"
+                  },
+                  "zone": "front"
+                }
+              ]
+            }
+          ],
+          "on": "frontline_changed"
+        }
+      ],
+      "faction": "Germany",
+      "id": "card_unit_panzer_35t_commander",
+      "kind": "tank",
+      "native_code": "fR",
+      "operation_cost": 1,
+      "title": "35(t) COMMAND TANK"
+    },
+    {
+      "attack": 1,
+      "blitz": false,
+      "cost": 1,
+      "defense": 1,
+      "effects": [
+        {
+          "effects": [
+            {
+              "card": "card_event_surprise_attack",
+              "op": "create",
+              "side": "friendly",
+              "zone": "hand"
+            }
+          ],
+          "on": "deploy"
+        }
+      ],
+      "faction": "Japan",
+      "id": "card_unit_type94_tk",
+      "kind": "tank",
+      "native_code": "7e",
+      "operation_cost": 0,
+      "title": "TYPE 94 TK"
+    },
+    {
+      "attack": 1,
+      "auras": [
+        {
+          "attack": 1,
+          "target": {
+            "kind": "all",
+            "query": {
+              "area": "board",
+              "exclude_source": true,
+              "side": "friendly",
+              "units_only": true
+            }
+          }
+        }
+      ],
+      "blitz": false,
+      "cost": 1,
+      "defense": 1,
+      "faction": "Japan",
+      "id": "card_unit_type_93",
+      "kind": "tank",
+      "native_code": "7l",
+      "operation_cost": 1,
+      "title": "TYPE 93"
+    },
+    {
+      "attack": 1,
+      "blitz": true,
+      "cost": 1,
+      "defense": 1,
+      "effects": [
+        {
+          "effects": [
+            {
+              "condition": {
+                "query": {
+                  "area": "board",
+                  "exclude_source": false,
+                  "kind": "hq",
+                  "side": "enemy",
+                  "units_only": false
+                },
+                "test": "subject_matches"
+              },
+              "op": "if",
+              "otherwise": [],
+              "then": [
+                {
+                  "attack": 1,
+                  "defense": 0,
+                  "op": "modify",
+                  "target": {
+                    "kind": "source"
+                  }
+                }
+              ]
+            }
+          ],
+          "on": "damage"
+        }
+      ],
+      "faction": "Japan",
+      "id": "card_unit_type_97_te_ke",
+      "kind": "tank",
+      "native_code": "nI",
+      "operation_cost": 0,
+      "title": "TYPE 97 TE-KE"
+    }
+  ],
+  "id": "native.japan-germany.aggro.v1",
+  "version": 1
+}

@@ -1,0 +1,5 @@
+{
+  "seed": 42,
+  "left_deck": ["mod_arc_infantry", "mod_last_supply", "mod_reinforcements", "mod_arc_infantry", "mod_last_supply", "mod_reinforcements", "card_unit_12th_infantry_regiment_tut", "card_unit_panzer_35_t_tut", "card_unit_t_34", "mod_arc_infantry", "mod_last_supply", "card_unit_t_34"],
+  "right_deck": ["mod_arc_infantry", "mod_last_supply", "mod_reinforcements", "mod_arc_infantry", "mod_last_supply", "mod_reinforcements", "card_unit_12th_infantry_regiment_tut", "card_unit_panzer_35_t_tut", "card_unit_t_34", "mod_arc_infantry", "mod_last_supply", "card_unit_t_34"]
+}

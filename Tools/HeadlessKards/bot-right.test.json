@@ -1,0 +1,10 @@
+{
+  "battle_code": "HEADLESS_INTEGRATION",
+  "output_directory": "artifacts/network-integration",
+  "server": "http://127.0.0.1:19145",
+  "action_milliseconds": 0,
+  "username": "bot-right",
+  "first_turn_draws": true,
+  "timeout_seconds": 120,
+  "poll_milliseconds": 100
+}

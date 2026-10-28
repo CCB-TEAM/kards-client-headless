@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net10.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><Nullable>disable</Nullable><NoWarn>CS8632;CS0168;CS0219</NoWarn></PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../HeadlessKards/HeadlessKards.csproj" />
+    <Compile Include="../../Research/Headless/kards-sim/KardsSim/Core/Rng.cs" Link="Reference/Rng.cs" />
+    <Compile Include="../../Research/Headless/kards-sim/KardsSim/Core/Trigger.g.cs" Link="Reference/Trigger.g.cs" />
+    <Compile Include="../../Research/Headless/kards-sim/KardsSim/Kismet/*.cs" Link="Reference/%(Filename)%(Extension)" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,13 @@
+{
+  "server": "http://127.0.0.1:1145",
+  "username": "headless_lcorp_aggro",
+  "battle_code": "LCORP",
+  "first_turn_draws": true,
+  "poll_milliseconds": 500,
+  "action_milliseconds": 900,
+  "timeout_seconds": 1800,
+  "output_directory": "artifacts/live-aggro",
+  "deck_code": "%%31|5C5x6B6y7xhHlfm6rk;3f3Q5X6EfRlknI;4p6x7e7l;5Z;;;~;;;|6l3v",
+  "main_faction": "Japan",
+  "ally_faction": "Germany"
+}

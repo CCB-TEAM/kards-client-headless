@@ -1,0 +1,141 @@
+{
+  "cards": [
+    {
+      "attack": 0,
+      "blitz": false,
+      "cost": 0,
+      "defense": 20,
+      "id": "card_location_berlin",
+      "kind": "hq",
+      "operation_cost": 0,
+      "title": "DANZIG"
+    },
+    {
+      "attack": 0,
+      "blitz": false,
+      "cost": 0,
+      "defense": 20,
+      "id": "card_location_london",
+      "kind": "hq",
+      "operation_cost": 0,
+      "title": "ALEXANDRIA"
+    },
+    {
+      "attack": 2,
+      "blitz": false,
+      "cost": 1,
+      "defense": 2,
+      "id": "card_unit_121st_regiment_tut",
+      "kind": "infantry",
+      "operation_cost": 1,
+      "title": "121st Regiment (tutorial)"
+    },
+    {
+      "attack": 2,
+      "blitz": false,
+      "cost": 1,
+      "defense": 2,
+      "id": "card_unit_12th_infantry_regiment_tut",
+      "kind": "infantry",
+      "operation_cost": 1,
+      "title": "12th Infantry (tutorial)"
+    },
+    {
+      "attack": 2,
+      "blitz": false,
+      "cost": 2,
+      "defense": 2,
+      "id": "card_unit_panzer_35_t_tut",
+      "kind": "tank",
+      "operation_cost": 1,
+      "title": "Panzer 35(t) (tutorial)"
+    },
+    {
+      "attack": 5,
+      "blitz": true,
+      "cost": 5,
+      "defense": 5,
+      "id": "card_unit_t_34",
+      "kind": "tank",
+      "operation_cost": 2,
+      "title": "T-34 1942"
+    },
+    {
+      "attack": 1,
+      "blitz": true,
+      "cost": 1,
+      "defense": 3,
+      "effects": [
+        {
+          "effects": [
+            {
+              "amount": 2,
+              "op": "damage",
+              "target": {
+                "kind": "random",
+                "query": {
+                  "area": "board",
+                  "exclude_source": false,
+                  "side": "enemy",
+                  "units_only": true
+                }
+              }
+            }
+          ],
+          "on": "deploy"
+        }
+      ],
+      "id": "mod_arc_infantry",
+      "kind": "infantry",
+      "operation_cost": 1,
+      "title": "Arc infantry"
+    },
+    {
+      "attack": 1,
+      "blitz": false,
+      "cost": 1,
+      "defense": 1,
+      "effects": [
+        {
+          "effects": [
+            {
+              "count": 1,
+              "op": "draw",
+              "side": "friendly"
+            }
+          ],
+          "on": "death"
+        }
+      ],
+      "id": "mod_last_supply",
+      "kind": "infantry",
+      "operation_cost": 1,
+      "title": "Last supply"
+    },
+    {
+      "attack": 0,
+      "blitz": false,
+      "cost": 1,
+      "defense": 0,
+      "effects": [
+        {
+          "effects": [
+            {
+              "card": "mod_arc_infantry",
+              "op": "create",
+              "side": "friendly",
+              "zone": "support"
+            }
+          ],
+          "on": "deploy"
+        }
+      ],
+      "id": "mod_reinforcements",
+      "kind": "order",
+      "operation_cost": 0,
+      "title": "Reinforcements"
+    }
+  ],
+  "id": "example.cards",
+  "version": 1
+}

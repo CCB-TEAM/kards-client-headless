@@ -1,0 +1,10 @@
+{
+  "server": "http://127.0.0.1:1145",
+  "username": "headless_lcorp",
+  "battle_code": "LCORP",
+  "first_turn_draws": true,
+  "poll_milliseconds": 500,
+  "action_milliseconds": 900,
+  "timeout_seconds": 1800,
+  "output_directory": "artifacts/live"
+}

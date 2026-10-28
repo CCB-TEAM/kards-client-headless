@@ -1,0 +1,8 @@
+[
+  {"id":"card_location_london","title":"ALEXANDRIA","kind":"hq","cost":0,"operation_cost":0,"attack":0,"defense":20,"blitz":false},
+  {"id":"card_location_berlin","title":"DANZIG","kind":"hq","cost":0,"operation_cost":0,"attack":0,"defense":20,"blitz":false},
+  {"id":"card_unit_12th_infantry_regiment_tut","title":"12th Infantry (tutorial)","kind":"infantry","cost":1,"operation_cost":1,"attack":2,"defense":2,"blitz":false},
+  {"id":"card_unit_121st_regiment_tut","title":"121st Regiment (tutorial)","kind":"infantry","cost":1,"operation_cost":1,"attack":2,"defense":2,"blitz":false},
+  {"id":"card_unit_panzer_35_t_tut","title":"Panzer 35(t) (tutorial)","kind":"tank","cost":2,"operation_cost":1,"attack":2,"defense":2,"blitz":false},
+  {"id":"card_unit_t_34","title":"T-34 1942","kind":"tank","cost":5,"operation_cost":2,"attack":5,"defense":5,"blitz":true}
+]

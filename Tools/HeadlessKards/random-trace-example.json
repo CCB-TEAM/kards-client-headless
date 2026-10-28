@@ -1,0 +1,14 @@
+{
+  "seeds":{"match-a":42,"match-b":-1},
+  "operations":[
+    {"kind":"raw","stream":"match-a"},
+    {"kind":"next","stream":"match-a","n":1},
+    {"kind":"range","stream":"match-a","low":7,"high":7},
+    {"kind":"shuffle","stream":"match-a","values":[10,20,30,40,50]},
+    {"kind":"host_shuffle","stream":"match-a","values":[10,20,30,40,50]},
+    {"kind":"host_shuffle","stream":"match-b","values":[10,20,30,40,50]},
+    {"kind":"raw","stream":"match-b"},
+    {"kind":"range","stream":"match-a","low":-2147483648,"high":2147483647},
+    {"kind":"raw","stream":"match-a"}
+  ]
+}
